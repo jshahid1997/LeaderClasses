@@ -46,10 +46,10 @@ class Header extends Component {
                 <NavbarBrand className="mx-auto d-block" href="/">
                   <img
                     className="mx-auto d-block"
-                    src="logo512.png"
-                    height="30"
-                    width="41"
-                    alt="Ristorante con Fusion"
+                    src="assets/images/LC brand 2.png"
+                    height="50"
+                    width="50"
+                    alt="Leader Classes"
                   />
                 </NavbarBrand>
               </div>

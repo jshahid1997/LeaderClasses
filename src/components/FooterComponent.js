@@ -6,8 +6,8 @@ function Footer(props) {
   return (
     <div className="footer">
       <div className="container-fluid">
-        <div className="row  align-items-center justify-content-center">
-          <div className="col-6 col-md-4">
+        <div className="row  align-items-center justify-content-center mt-4">
+          <div className="col-6 col-md-6 col-lg-4">
             <h5>Share via :-</h5>
             <div>
               <a
@@ -30,7 +30,7 @@ function Footer(props) {
               </a>
             </div>
           </div>
-          <div className="col-6 col-md-4">
+          <div className="col-6 col-md-6 col-lg-4">
             <h5>Follow us :-</h5>
             <div>
               <a
@@ -53,25 +53,25 @@ function Footer(props) {
               </a>
             </div>
           </div>
-          <div className="col-12 col-md-4 mx-auto align-self-center px-5 py-5">
-            <div class="list-group list-group-horizontal">
+          <div className="col-12 col-md-12 col-lg-4 mx-auto align-self-center px-5 py-5">
+            <div className="list-group list-group-horizontal">
               <a
                 href="https://www.leaderclasses.com/contact"
-                class="list-group-item list-group-item-action"
+                className="list-group-item list-group-item-action"
               >
                 Contact
               </a>
 
               <a
                 href="https://www.leaderclasses.com/terms-and-conditions"
-                class="list-group-item list-group-item-action"
+                className="list-group-item list-group-item-action"
               >
                 Terms
               </a>
 
               <a
                 href="https://www.leaderclasses.com/privacy"
-                class="list-group-item list-group-item-action"
+                className="list-group-item list-group-item-action"
               >
                 Privacy
               </a>

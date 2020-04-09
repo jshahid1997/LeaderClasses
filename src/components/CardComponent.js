@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 
+import { Player } from "video-react";
 class Cards extends Component {
   constructor(props) {
     super(props);
@@ -8,51 +9,47 @@ class Cards extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-md-4">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <a
-                  className="btn btn-social-icon btn-linkedin"
-                  href="https://www.linkedin.com/shareArticle?mini=true&url=linkedin.com/company/leaderclasses&title=&summary=&source="
-                >
-                  <i className="fa fa-linkedin"></i>
-                </a>
-              </Card.Body>
-            </Card>
-          </div>
-          <div className="col-12 col-md-4"></div>
-          <div className="col-12 col-md-4"></div>
-        </div>
-        <div className="row">
-          <div className="col-12 col-md-4">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <a
-                  className="btn btn-social-icon btn-linkedin"
-                  href="https://www.linkedin.com/shareArticle?mini=true&url=linkedin.com/company/leaderclasses&title=&summary=&source="
-                >
-                  <i className="fa fa-linkedin"></i>
-                </a>
-              </Card.Body>
-            </Card>
-          </div>
-          <div className="col-12 col-md-4"></div>
-          <div className="col-12 col-md-4"></div>
-        </div>
+      <div className="container-fluid pl-5 pr-5">
+        {this.props.ceo.map((c) => {
+          return (
+            <div className="row">
+              <div className="col-12 col-md-6 col-lg-4 text-center">
+                <Card style={{ width: "18rem" }}>
+                  <Card.Img variant="top" src={c.image} />
+                  <Card.Body>
+                    <Card.Title>{c.name}</Card.Title>
+                    <Card.Subtitle>{c.designation}</Card.Subtitle>
+                    <Card.Text>{c.company}</Card.Text>
+
+                    <a
+                      className="btn btn-social-icon btn-linkedin"
+                      href={c.linkedin}
+                    >
+                      <i className="fa fa-linkedin"></i>
+                    </a>
+                  </Card.Body>
+                </Card>
+                <br />
+                <br />
+              </div>
+
+              <div className="col-12 col-md-6 col-lg-4">
+                <h2>Executive Biography</h2>
+                <br />
+                <h5 className="bio">{c.bio}</h5>
+                <br />
+                <br />
+              </div>
+              <div className="col-12 col-md-12 col-lg-4">
+                <Player playsInline poster={c.video_poster} src={c.video} />
+                <br />
+                <br />
+              </div>
+              <br />
+              <br />
+            </div>
+          );
+        })}
       </div>
     );
   }
